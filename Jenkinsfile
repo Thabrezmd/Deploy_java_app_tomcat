@@ -55,13 +55,13 @@ pipeline {
             
          stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u admin:thabrezmd -T target/**.war "http://13.126.99.153:8080/manager/text/deploy?path=/maven&update=true"'
+                sh 'curl -u admin:thabrezmd -T target/**.war "http://3.110.87.198:8080/manager/text/deploy?path=/maven&update=true"'
             }
         } 
   
           stage('Stage-10 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://13.126.99.153:8080/maven"'
+                sh 'curl --retry-delay 10 --retry 5 "http://3.110.87.198:8080/maven"'
             }
         }
         }
