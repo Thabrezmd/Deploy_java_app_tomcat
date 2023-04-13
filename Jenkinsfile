@@ -15,7 +15,7 @@ pipeline {
     //    }
     stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u thabrez:thabrezmd -T target/01-maven-web-app.war "http://13.235.17.92:8080/manager/text/deploy?path=/maven&update=true"'
+                sh 'curl -u thabrez:Tabrez@99 -T target/01-maven-web-app.war "http://13.235.17.92:8080/manager/text/deploy?path=/maven&update=true"'
             }
         } 
   
